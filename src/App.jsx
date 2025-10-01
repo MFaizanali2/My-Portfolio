@@ -6,6 +6,7 @@ import OurWork from './components/OurWork'
 import ContactUs from './components/ContactUs'
 import { Toaster } from 'react-hot-toast'
 import Footer from './components/Footer'
+import TrustedBy from './components/TrustedBy'
 
 const App = () => {
   const [theme , setTheme] = useState(localStorage.getItem('theme') ?
@@ -13,7 +14,6 @@ const App = () => {
    const outlineRef = useRef(null);
   const dotRef = useRef(null);
 
-  // ref for custom cursor position tracking
   const mouse = useRef({ x: 0, y: 0 });
   const position = useRef({ x: 0, y: 0 });
 
@@ -52,18 +52,17 @@ const App = () => {
       <Toaster />
       <Navbar theme={theme} setTheme={setTheme}/>
       <Hero />
+      <TrustedBy />
       <Services />
       <OurWork />
       <ContactUs />
       <Footer theme={theme}/>
 
-      {/* Small dot */}
       <div
         ref={dotRef} 
         className="fixed top-0 left-0 h-3 w-3 rounded-full bg-primary pointer-events-none z-[9999]"
       ></div>
 
-      {/* Outline */}
       <div
         ref={outlineRef} style={{transition: 'transform 0.1s ease-out'}}
         className="fixed top-0 left-0 h-10 w-10 rounded-full border border-primary pointer-events-none z-[9998]"

@@ -1,28 +1,9 @@
 import React from "react";
 import Title from "./Title";
-import assets from "../assets/assets";
 import { motion } from "motion/react";
+import { workData } from "./data";
 
 const OurWork = () => {
-  const workData = [
-    {
-      title: "Mobile app marketing",
-      description:
-        "We turn bold ideas into powerful digital solutions that connect, engage...",
-      icons: assets.work_mobile_app,
-    },
-    {
-      title: "Dashboard management",
-      description: "We help you execute your plan and deliver results.",
-      icons: assets.work_dashboard_management,
-    },
-    {
-      title: "Fitness app promotion",
-      description:
-        "We help you create a marketing strategy that drives results.",
-      icons: assets.work_fitness_app,
-    },
-  ];
   return (
     <motion.div
       initial="hidden"
@@ -34,7 +15,7 @@ const OurWork = () => {
     pt-30 text-gray-700 dark:text-white"
     >
       <Title
-        title="Our Project"
+        title="My Project"
         desc="Showcasing my ability to create full-stack
          solutions with modern frontend and backend technologies."
       />
@@ -42,16 +23,38 @@ const OurWork = () => {
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-5xl">
         {workData.map((work, index) => (
           <motion.div
+            key={index}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.2, delay: 0.1 }}
             viewport={{ once: true }}
-            key={index}
-            className="hover:scale-102 duration-500 transition-all cursor-pointer"
+            className="hover:scale-102 duration-500 transition-all cursor-pointer bg-white
+             dark:bg-gray-900 rounded-xl p-4 shadow-lg"
           >
             <img src={work.icons} alt="" className="w-full rounded-xl" />
-            <h3 className="mt-3 mb-2 text-lg font-semibold">{work.title}</h3>
-            <p className="text-sm opacity-60 w-5/6">{work.description}</p>
+
+            <h3 className="mt-3 mb-4 text-lg font-semibold">{work.title}</h3>
+
+            <div className="flex gap-4">
+              <a
+                href={work.previewLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 text-center px-4 py-2 bg-gradient-to-r from-[#5044E5] to-[#4d8cea]
+                 text-white rounded-lg font-medium shadow-md hover:opacity-90 transition"
+              >
+                Preview
+              </a>
+              <a
+                href={work.codeLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 text-center px-4 py-2 border-2 border-[#5044E5] text-[#5044E5]
+                 rounded-lg font-medium shadow-md hover:bg-[#5044E5] hover:text-white transition"
+              >
+                Code
+              </a>
+            </div>
           </motion.div>
         ))}
       </div>

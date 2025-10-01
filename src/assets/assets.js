@@ -10,9 +10,9 @@ import marketing_icon from './marketing_icon.svg'
 import social_icon from './social_icon.svg'
 import menu_icon from './menu_icon.svg'
 import close_icon from './close_icon.svg'
-import work_mobile_app from './work_mobile_app.png'
-import work_fitness_app from './work_fitness_app.png'
-import work_dashboard_management from './work_dashboard_management.png'
+import Craft from './craft.jpeg'
+import Crowny from './crowny.jpeg'
+import Rentup from './rentup.jpeg'
 import email_icon from './email_icon.svg'
 import person_icon from './person_icon.svg'
 import twitter_icon from './twitter_icon.svg'
@@ -21,6 +21,35 @@ import logo_dark from './logo_dark.svg'
 import menu_icon_dark from './menu_icon_dark.svg'
 import sun_icon from './sun_icon.svg'
 import moon_icon from './moon_icon.svg'
+
+import css from './skills/css.png'
+import git from './skills/git.png'
+import github from './skills/github.png'
+import express from './skills/expressjs.png'
+import html from './skills/html.png'
+import js from './skills/js.png'
+import mongodb from './skills/mongodb.png'
+import nextjs from './skills/nextjs.jpg'
+import nodejs from './skills/nodejs.png'
+import reactjs from './skills/reactjs.png'
+import tailwind from './skills/tailwindcss.png'
+import vercel from './skills/vercel.png'
+
+
+export const skills_logos = [
+  css,
+  git,
+  github,
+  express,
+  html,
+  js,
+  mongodb,
+  nextjs,
+  nodejs,
+  reactjs,
+  tailwind,
+  vercel
+]
 
 const assets = {
   logo,
@@ -35,9 +64,9 @@ const assets = {
   social_icon,
   menu_icon,
   close_icon,
-  work_mobile_app,
-  work_fitness_app,
-  work_dashboard_management,
+  Craft,
+  Crowny,
+  Rentup,
   email_icon,
   person_icon,
   twitter_icon,

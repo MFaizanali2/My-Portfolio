@@ -14,13 +14,15 @@ const Navbar = ({ theme, setTheme }) => {
       className="flex justify-between items-center text-center px-4 sm:px-12 lg:px-24 xl:px-40 py-4 sticky top-0 z-20
     backdrop-blur-xl font-medium bg-white/50 dark:bg-gray-900/700"
     >
-      <h1
-        className={`text-xl font-extrabold ${
-          theme === "dark" ? "text-white" : "text-black"
-        }`}
-      >
-        M Faizan Ali
-      </h1>
+      <a href="#">
+        <h1
+          className={`text-xl font-extrabold ${
+            theme === "dark" ? "text-white" : "text-black"
+          }`}
+        >
+          M Faizan Ali
+        </h1>
+      </a>
       {/* <img src={theme === "dark" ? assets.logo_dark : assets.logo} className='w-32 sm:w-40 cursor-pointer' alt="" /> */}
 
       <div
@@ -46,10 +48,17 @@ const Navbar = ({ theme, setTheme }) => {
         </a>
         <a
           onClick={() => setSidebar(false)}
-          href="#service"
+          href="#skills"
           className="sm:hover:border-b"
         >
           Skills
+        </a>
+        <a
+          onClick={() => setSidebar(false)}
+          href="#service"
+          className="sm:hover:border-b"
+        >
+          Services
         </a>
         <a
           onClick={() => setSidebar(false)}
